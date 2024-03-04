@@ -11,3 +11,6 @@ def archive_creation():
     with zipfile.ZipFile(os.path.join(ARC_DIR, 'file_zip.zip'), 'w') as zf:
         for file in os.listdir(TMP_DIR):
             zf.write(os.path.join(TMP_DIR, file), file)
+
+    yield
+    shutil.rmtree(ARC_DIR)
