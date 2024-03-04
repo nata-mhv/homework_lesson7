@@ -2,6 +2,7 @@ import pytest
 import os
 import zipfile
 from paths import TMP_DIR, ARC_DIR
+import shutil
 
 @pytest.fixture(scope='session', autouse=True)
 def archive_creation():
